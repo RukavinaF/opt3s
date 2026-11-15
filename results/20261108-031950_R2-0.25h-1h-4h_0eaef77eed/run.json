@@ -1,0 +1,151 @@
+{
+  "run_id": "20261108-031950_R2-0.25h-1h-4h_0eaef77eed",
+  "scenario": {
+    "name": "R2-0.25h-1h-4h",
+    "notes": "sampling: fast 0.25 h, medium 1 h, slow 4 h",
+    "tags": [],
+    "t": 0.25,
+    "t_comp": {
+      "BLR": 1.0,
+      "DMN": 4.0,
+      "ELYS": 4.0,
+      "FEC": 1.0,
+      "FHC": 1.0,
+      "GGI": 4.0,
+      "HCMP1": 4.0,
+      "HCMP2": 4.0,
+      "HSLS": 4.0,
+      "HTS": 1.0,
+      "OCMP": 4.0,
+      "OSLS": 4.0,
+      "OTNK": 4.0,
+      "PVP": 1.0,
+      "RCS": 1.0,
+      "WB": 4.0,
+      "WGS": 4.0
+    },
+    "start_date": "2025-01-01T00:00:00",
+    "end_date": "2025-12-31T00:00:00",
+    "N_DL": 20,
+    "r": 0.03,
+    "scale_constraints": true,
+    "scale_objective": true,
+    "egc_equality": true,
+    "hts_balance": "ineq",
+    "params": {},
+    "solver_name": "highs",
+    "io_api": "direct",
+    "solver_options": {
+      "solver": "hipo",
+      "simplex_strategy": 1,
+      "run_crossover": "off",
+      "time_limit": 43200
+    },
+    "progress": true,
+    "N_days": 365,
+    "N_h": 35040,
+    "lamda": 1.0
+  },
+  "scenario_fingerprint": "0eaef77eed",
+  "parameters_fingerprint": "f3d4adcf4b",
+  "objective": {
+    "annuity": 14.877474860455516,
+    "objective_scale": 33544.43069457294,
+    "solver_value": -508.7573714867601,
+    "value": -17006466.488744386,
+    "CAPEX": 16757470.436636336,
+    "OPEX": 5213532.197294036,
+    "REV": 7482999.10898922,
+    "profit": 2269466.911695184,
+    "NPV": 17006466.488744386
+  },
+  "metrics": {
+    "phases": {
+      "formulation": {
+        "wall_s": 4.244483999966178,
+        "cpu_s": 2.765625,
+        "rss_start_mb": 106.96875,
+        "rss_end_mb": 220.0703125,
+        "rss_delta_mb": 113.1015625,
+        "peak_rss_mb": 230.2578125,
+        "py_peak_mb": null
+      },
+      "solving": {
+        "wall_s": 4110.9398868000135,
+        "cpu_s": 4098.828125,
+        "rss_start_mb": 220.09375,
+        "rss_end_mb": 1004.765625,
+        "rss_delta_mb": 784.671875,
+        "peak_rss_mb": 1439.51953125,
+        "py_peak_mb": null
+      },
+      "postprocessing": {
+        "wall_s": 21.077191599993967,
+        "cpu_s": 21.03125,
+        "rss_start_mb": 1004.765625,
+        "rss_end_mb": 1024.94921875,
+        "rss_delta_mb": 20.18359375,
+        "peak_rss_mb": 1439.51953125,
+        "py_peak_mb": null
+      }
+    },
+    "totals": {
+      "total_wall_s": 4136.261562399974,
+      "total_cpu_s": 4122.625,
+      "peak_rss_mb": 1439.51953125
+    },
+    "size": {
+      "n_variables": 451190,
+      "n_constraints": 568605,
+      "source": "highs",
+      "n_rows": 568605,
+      "n_cols": 451190,
+      "n_nonzeros": 1994831,
+      "density": 7.775636840170238e-06,
+      "nnz_per_row": 3.5082895859164096
+    },
+    "solver": {
+      "solver_name": "highs",
+      "status": "ok",
+      "termination_condition": "optimal",
+      "objective_solver": -508.7573714867601,
+      "simplex_iterations": 518777,
+      "ipm_iterations": 0,
+      "crossover_iterations": 0,
+      "solver_runtime_s": 4109.949501399999,
+      "max_primal_infeasibility": 5.890200327485218e-08,
+      "max_dual_infeasibility": 2.247354088512777e-08,
+      "mip_gap": null,
+      "mip_nodes": -1,
+      "highs_model_status": "Optimal"
+    },
+    "environment": {
+      "timestamp": "2026-11-08T02:10:53.621217+01:00",
+      "python": "3.13.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+      "cpu_count": 12,
+      "packages": {
+        "linopy": "0.8.0",
+        "highspy": "1.15.1",
+        "gurobipy": "13.0.3",
+        "numpy": "2.5.0",
+        "pandas": "3.0.3",
+        "xarray": "2026.4.0",
+        "scipy": "1.18.0"
+      },
+      "git": {
+        "commit": "62e7d6fa067db31d3a4ccef6d14840af07e66151",
+        "dirty": true
+      }
+    }
+  },
+  "model": "opt3s 0.1.0",
+  "files": {
+    "parameters": "parameters.json",
+    "costs": "costs.csv",
+    "sizes": "sizes.csv",
+    "amounts": "amounts.csv",
+    "solution": null
+  }
+}

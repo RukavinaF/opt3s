@@ -1,0 +1,9 @@
+# Versions used for the results of the article (Python 3.13).
+numpy==2.5.0
+pandas==3.0.3
+xarray==2026.4.0
+scipy==1.18.0
+linopy==0.8.0
+highspy==1.15.1
+# only for the figures of depot.report
+matplotlib==3.11.1

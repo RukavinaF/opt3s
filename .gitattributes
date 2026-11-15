@@ -1,0 +1,2 @@
+# LF everywhere, so that regenerated tables match the committed ones on every platform
+* text=auto eol=lf

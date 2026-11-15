@@ -1,0 +1,149 @@
+{
+  "run_id": "20261111-125059_R3b-1h-1h-4h-DA_0802e8feda",
+  "scenario": {
+    "name": "R3b-1h-1h-4h-DA",
+    "notes": "sampling: fast 1 h, medium 1 h, slow 4 h; EGC balance as inequality, day-ahead prices",
+    "tags": [],
+    "t": 1.0,
+    "t_comp": {
+      "BLR": 1.0,
+      "DMN": 4.0,
+      "ELYS": 4.0,
+      "FEC": 1.0,
+      "FHC": 1.0,
+      "GGI": 4.0,
+      "HCMP1": 4.0,
+      "HCMP2": 4.0,
+      "HSLS": 4.0,
+      "HTS": 1.0,
+      "OCMP": 4.0,
+      "OSLS": 4.0,
+      "OTNK": 4.0,
+      "PVP": 1.0,
+      "RCS": 1.0,
+      "WB": 4.0,
+      "WGS": 4.0
+    },
+    "start_date": "2025-01-01T00:00:00",
+    "end_date": "2025-12-31T00:00:00",
+    "N_DL": 20,
+    "r": 0.03,
+    "scale_constraints": true,
+    "scale_objective": true,
+    "egc_equality": false,
+    "hts_balance": "ineq",
+    "params": {},
+    "solver_name": "highs",
+    "io_api": "direct",
+    "solver_options": {
+      "solver": "simplex",
+      "simplex_strategy": 1
+    },
+    "progress": true,
+    "N_days": 365,
+    "N_h": 8760,
+    "lamda": 1.0
+  },
+  "scenario_fingerprint": "0802e8feda",
+  "parameters_fingerprint": "afa1d0b84f",
+  "objective": {
+    "annuity": 14.877474860455516,
+    "objective_scale": 33545.140287910726,
+    "solver_value": -508.5892743479831,
+    "value": -17001188.65749076,
+    "CAPEX": 16741964.911975795,
+    "OPEX": 5215163.709250455,
+    "REV": 7483233.652971631,
+    "profit": 2268069.943721176,
+    "NPV": 17001188.65749076
+  },
+  "metrics": {
+    "phases": {
+      "formulation": {
+        "wall_s": 2.12299200000416,
+        "cpu_s": 2.0625,
+        "rss_start_mb": 106.3984375,
+        "rss_end_mb": 160.4609375,
+        "rss_delta_mb": 54.0625,
+        "peak_rss_mb": 162.328125,
+        "py_peak_mb": null
+      },
+      "solving": {
+        "wall_s": 1072.368789500004,
+        "cpu_s": 1070.6875,
+        "rss_start_mb": 160.46484375,
+        "rss_end_mb": 444.76953125,
+        "rss_delta_mb": 284.3046875,
+        "peak_rss_mb": 591.41015625,
+        "py_peak_mb": null
+      },
+      "postprocessing": {
+        "wall_s": 9.516524599996046,
+        "cpu_s": 9.5,
+        "rss_start_mb": 444.76953125,
+        "rss_end_mb": 441.578125,
+        "rss_delta_mb": -3.19140625,
+        "peak_rss_mb": 591.41015625,
+        "py_peak_mb": null
+      }
+    },
+    "totals": {
+      "total_wall_s": 1084.0083061000041,
+      "total_cpu_s": 1082.25,
+      "peak_rss_mb": 591.41015625
+    },
+    "size": {
+      "n_variables": 162110,
+      "n_constraints": 226947,
+      "source": "highs",
+      "n_rows": 226947,
+      "n_cols": 162110,
+      "n_nonzeros": 693091,
+      "density": 1.8838920241520313e-05,
+      "nnz_per_row": 3.0539773603528575
+    },
+    "solver": {
+      "solver_name": "highs",
+      "status": "ok",
+      "termination_condition": "optimal",
+      "objective_solver": -508.5892743479831,
+      "simplex_iterations": 387049,
+      "ipm_iterations": 0,
+      "crossover_iterations": 0,
+      "solver_runtime_s": 1071.7221178000036,
+      "max_primal_infeasibility": 6.479936039355261e-08,
+      "max_dual_infeasibility": 2.2522053165519544e-08,
+      "mip_gap": null,
+      "mip_nodes": -1,
+      "highs_model_status": "Optimal"
+    },
+    "environment": {
+      "timestamp": "2026-11-11T12:32:55.254200+01:00",
+      "python": "3.13.14",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+      "cpu_count": 12,
+      "packages": {
+        "linopy": "0.8.0",
+        "highspy": "1.15.1",
+        "gurobipy": "13.0.3",
+        "numpy": "2.5.0",
+        "pandas": "3.0.3",
+        "xarray": "2026.4.0",
+        "scipy": "1.18.0"
+      },
+      "git": {
+        "commit": "7b207093f19b72929712116e7ed0e4f24455dbef",
+        "dirty": true
+      }
+    }
+  },
+  "model": "opt3s 0.1.0",
+  "files": {
+    "parameters": "parameters.json",
+    "costs": "costs.csv",
+    "sizes": "sizes.csv",
+    "amounts": "amounts.csv",
+    "solution": null
+  }
+}

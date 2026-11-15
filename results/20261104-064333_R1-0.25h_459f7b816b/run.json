@@ -1,0 +1,131 @@
+{
+  "run_id": "20261104-064333_R1-0.25h_459f7b816b",
+  "scenario": {
+    "name": "R1-0.25h",
+    "notes": "same sampling for all comps - 0.25 h",
+    "tags": [],
+    "t": 0.25,
+    "t_comp": {},
+    "start_date": "2025-01-01T00:00:00",
+    "end_date": "2025-12-31T00:00:00",
+    "N_DL": 20,
+    "r": 0.03,
+    "scale_constraints": true,
+    "scale_objective": true,
+    "egc_equality": true,
+    "hts_balance": "ineq",
+    "params": {},
+    "solver_name": "highs",
+    "io_api": "direct",
+    "solver_options": {
+      "solver": "simplex",
+      "simplex_strategy": 1
+    },
+    "progress": true,
+    "N_days": 365,
+    "N_h": 35040,
+    "lamda": 1.0
+  },
+  "scenario_fingerprint": "459f7b816b",
+  "parameters_fingerprint": "f3d4adcf4b",
+  "objective": {
+    "annuity": 14.877474860455516,
+    "objective_scale": 14686.608492832755,
+    "solver_value": -1258.6115690718884,
+    "value": -18425225.46005626,
+    "CAPEX": 17085606.190770447,
+    "OPEX": 5121199.317086639,
+    "REV": 7508084.993849896,
+    "profit": 2386885.676763257,
+    "NPV": 18425225.46005626
+  },
+  "metrics": {
+    "phases": {
+      "formulation": {
+        "wall_s": 2.3481556000042474,
+        "cpu_s": 2.265625,
+        "rss_start_mb": 106.39453125,
+        "rss_end_mb": 273.27734375,
+        "rss_delta_mb": 166.8828125,
+        "peak_rss_mb": 281.296875,
+        "py_peak_mb": null
+      },
+      "solving": {
+        "wall_s": 40301.834803499994,
+        "cpu_s": 40190.828125,
+        "rss_start_mb": 273.32421875,
+        "rss_end_mb": 1820.08203125,
+        "rss_delta_mb": 1546.7578125,
+        "peak_rss_mb": 2599.890625,
+        "py_peak_mb": null
+      },
+      "postprocessing": {
+        "wall_s": 35.09377169999061,
+        "cpu_s": 34.90625,
+        "rss_start_mb": 1820.08203125,
+        "rss_end_mb": 1817.8984375,
+        "rss_delta_mb": -2.18359375,
+        "peak_rss_mb": 2599.890625,
+        "py_peak_mb": null
+      }
+    },
+    "totals": {
+      "total_wall_s": 40339.27673079999,
+      "total_cpu_s": 40228.0,
+      "peak_rss_mb": 2599.890625
+    },
+    "size": {
+      "n_variables": 805970,
+      "n_constraints": 1192755,
+      "source": "highs",
+      "n_rows": 1192755,
+      "n_cols": 805970,
+      "n_nonzeros": 3393571,
+      "density": 3.5300984494103172e-06,
+      "nnz_per_row": 2.845153447271233
+    },
+    "solver": {
+      "solver_name": "highs",
+      "status": "ok",
+      "termination_condition": "optimal",
+      "objective_solver": -1258.6115690718884,
+      "simplex_iterations": 2740348,
+      "ipm_iterations": 0,
+      "crossover_iterations": 0,
+      "solver_runtime_s": 40300.448678400004,
+      "max_primal_infeasibility": 8.295396014545986e-08,
+      "max_dual_infeasibility": 1.696295194149455e-08,
+      "mip_gap": null,
+      "mip_nodes": -1,
+      "highs_model_status": "Optimal"
+    },
+    "environment": {
+      "timestamp": "2026-11-03T19:31:13.853167+01:00",
+      "python": "3.13.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+      "cpu_count": 12,
+      "packages": {
+        "linopy": "0.8.0",
+        "highspy": "1.15.1",
+        "gurobipy": "13.0.3",
+        "numpy": "2.5.0",
+        "pandas": "3.0.3",
+        "xarray": "2026.4.0",
+        "scipy": "1.18.0"
+      },
+      "git": {
+        "commit": "62e7d6fa067db31d3a4ccef6d14840af07e66151",
+        "dirty": true
+      }
+    }
+  },
+  "model": "opt3s 0.1.0",
+  "files": {
+    "parameters": "parameters.json",
+    "costs": "costs.csv",
+    "sizes": "sizes.csv",
+    "amounts": "amounts.csv",
+    "solution": null
+  }
+}

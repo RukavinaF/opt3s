@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opt3s"
+version = "0.1.0"
+description = "Joint sizing and scheduling of energy hubs with heterogeneous sampling times (LP, linopy)"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "Filip Rukavina" }, { name = "Mario Vašak" }]
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "xarray", "linopy", "highspy"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+gurobi = ["gurobipy"]
+
+[project.urls]
+Repository = "https://github.com/RukavinaF/opt3s"
+
+[tool.setuptools.packages.find]
+include = ["opt3s*"]
