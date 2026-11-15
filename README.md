@@ -1,4 +1,4 @@
-# opt3s
+# opt3s - Optimal System Sizing and Scheduling
 
 **opt3s** is a Python package for the joint sizing and scheduling of energy hubs
 with linear programming. It works with any energy system and lets every
