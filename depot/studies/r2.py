@@ -196,7 +196,8 @@ def tables(store: ResultStore, out: Path, days: int | None) -> None:
                        ("S_R2_results", results_table(runs, scs))):  # fmt: skip
         (folder / f"{name}.tex").write_text(text, encoding="utf-8", newline="\n")
         print("wrote", folder / f"{name}.tex")
-    csv({sc.name: runs[sc.name] for sc in scs if sc.name in runs}).to_csv(folder / "R2_highs.csv")
+    frame = csv({sc.name: runs[sc.name] for sc in scs if sc.name in runs})
+    frame.to_csv(folder / "R2_highs.csv", lineterminator="\n")  # same file on every OS
     print("wrote", folder / "R2_highs.csv")
     if missing:
         print("MISSING:", ", ".join(missing))

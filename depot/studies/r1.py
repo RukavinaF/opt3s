@@ -212,7 +212,7 @@ def tables(store: ResultStore, out: Path) -> None:
                        ("S_R1_results", results_table(runs))):  # fmt: skip
         (folder / f"{name}.tex").write_text(text, encoding="utf-8", newline="\n")
         print("wrote", folder / f"{name}.tex")
-    csv(runs).to_csv(folder / "R1_highs.csv")
+    csv(runs).to_csv(folder / "R1_highs.csv", lineterminator="\n")  # same file on every OS
     print("wrote", folder / "R1_highs.csv")
     print("repeats per scenario:", {n: len(r.runs) for n, r in runs.items()})
     if missing:

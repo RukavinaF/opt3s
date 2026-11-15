@@ -519,7 +519,7 @@ def tables(store: ResultStore, out: Path, hts: str, days: int | None) -> None:
         for sc in p.both:
             if sc.name in runs:
                 frame.loc[f"released at {p.bus} per year", sc.name] = released(runs[sc.name], p.bus)
-    frame.to_csv(folder / "R3_highs.csv")
+    frame.to_csv(folder / "R3_highs.csv", lineterminator="\n")  # same file on every OS
     print("wrote", folder / "R3_highs.csv")
     missing = [sc.name for sc in scs if sc.name not in runs]
     if missing:
