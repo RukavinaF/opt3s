@@ -171,8 +171,12 @@ These commands read the stored runs in `results/` and write the tables of the
 article and its Supplementary Information to `tables/` (LaTeX fragments and one
 CSV file per scenario set with all numbers and the run IDs used). The files in
 `tables/` are the ones used in the article, so `git diff tables` shows that they
-are reproduced. `r3 tables` reports four missing R3a scenarios; these are
-comparisons of the heating system balance that are not part of the article.
+are reproduced. With the package versions of `requirements.txt` all files are
+identical; with newer versions of numpy and pandas, some values in the CSV
+files may differ in the last digit because of floating-point rounding, while
+the LaTeX tables stay the same. `r3 tables` reports four missing R3a scenarios;
+these are comparisons of the heating system balance that are not part of the
+article.
 
 ### Solving the scenarios again
 
